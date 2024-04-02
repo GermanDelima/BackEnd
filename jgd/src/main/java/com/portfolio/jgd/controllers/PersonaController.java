@@ -31,24 +31,24 @@ public class PersonaController {
     //editar persona
     //eliminar persona
     
-    @PostMapping()
+    @PostMapping("/crear/perfil")
     public ResponseEntity<PersonaDto> crearPersona(@RequestBody PersonaDto persona){
     return ResponseEntity.status(HttpStatus.OK).body(service.crearPersona(persona));
     }
-    @GetMapping("/{id}")
+    @GetMapping("/traer/perfil/{id}")
     public ResponseEntity<PersonaDto> getPersonaById(@PathVariable Long id){
     return ResponseEntity.status(HttpStatus.OK).body(service.getPersonaById(id));
     }
-    @GetMapping
+    @GetMapping("/traer/perfil")
     public ResponseEntity<List<PersonaDto>> getPersonas(){
         List<PersonaDto> lista = service.getPersonas();
         return ResponseEntity.status(HttpStatus.OK).body(lista);
     }
-    @PutMapping("/{id}")
+    @PutMapping("/editar/perfil/{id}")
     public ResponseEntity<PersonaDto> editPersona(@PathVariable Long id, @RequestBody PersonaDto dto){
     return ResponseEntity.status(HttpStatus.OK).body(service.editPersona(id, dto));
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/eliminar/perfil/{id}")
     public ResponseEntity<String> eliminar(@PathVariable Long id){
         return ResponseEntity.status(HttpStatus.OK).body(service.eliminar(id));
     
