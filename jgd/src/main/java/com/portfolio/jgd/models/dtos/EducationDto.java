@@ -6,12 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter @Setter
-@AllArgsConstructor
+@AllArgsConstructor 
 @NoArgsConstructor
-public class PersonaDto {
+@Getter @Setter
+
+public class EducationDto {
 private Long id;
-private String nombre;
-private String apellido;
-private String img;
+private String tituloEdu;
+private Long fechaEdu;
+private String descEdu;
+private String imgEdu;
 }
