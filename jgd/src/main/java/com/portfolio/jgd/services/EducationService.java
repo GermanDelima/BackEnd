@@ -5,19 +5,17 @@ import com.portfolio.jgd.models.dtos.EducationDto;
 import com.portfolio.jgd.repositories.EducationRepository;
 import java.util.List;
 import java.util.stream.Collectors;
-import mappers.EducationMapper;
+import com.portfolio.jgd.mappers.EducationMapper;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EducationService {
 
     public final EducationRepository repository;
-    public EducationService(EducationRepository repository){
-    this.repository = repository;
+
+    public EducationService(EducationRepository repository) {
+        this.repository = repository;
     }
-   
-    
-    
 
     public EducationDto crearEducation(EducationDto dto) {
         Education edu = repository.save(EducationMapper.dtoToEdu(dto));
@@ -43,19 +41,27 @@ public class EducationService {
         if (repository.existsById(id)) {
             Education eduToModify = repository.findById(id).get();
 
-            if (dto.getTituloEdu() != null) {
-                eduToModify.setTituloEdu(dto.getTituloEdu());
+            if (dto.getInstituto()!= null) {
+                eduToModify.setInstituto(dto.getInstituto());
             }
 
-            if (dto.getFechaEdu() != null) {
-                eduToModify.setFechaEdu(dto.getFechaEdu());
+            if (dto.getTitEdu() != null) {
+                eduToModify.setTitEdu(dto.getTitEdu());
             }
 
-            if (dto.getDescEdu() != null) {
-                eduToModify.setDescEdu(dto.getDescEdu());
+
+            if (dto.getFechaInic() != null) {
+                eduToModify.setFechaInic(dto.getFechaInic());
             }
-            if (dto.getImgEdu() != null) {
-                eduToModify.setImgEdu(dto.getImgEdu());
+            if (dto.getFechaFin() != null) {
+                eduToModify.setFechaFin(dto.getFechaFin());
+            }
+
+            if (dto.getDescEduc() != null) {
+                eduToModify.setDescEduc(dto.getDescEduc());
+            }
+            if (dto.getLogoCertificado() != null) {
+                eduToModify.setLogoCertificado(dto.getLogoCertificado());
             }
 
             Education edu = repository.save(eduToModify);
@@ -65,10 +71,10 @@ public class EducationService {
         return null;
     }
 
-    public String eliminar(Long id) {
+    public EducationDto eliminar(Long id) {
         if (repository.existsById(id)) {
             repository.deleteById(id);
-            return "Educación eliminada";
+
         }
         return null;
     }

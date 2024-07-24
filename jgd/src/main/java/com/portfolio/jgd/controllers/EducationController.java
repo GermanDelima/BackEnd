@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class EducationController {
    
     private final EducationService service;
-    public EducationController(EducationService service){
-    this.service = service;
+        public EducationController(EducationService service){
+        this.service = service;
     }
    
     @PostMapping("/api/education/crear/education")
@@ -42,7 +42,7 @@ public class EducationController {
     }
     
     @DeleteMapping("/api/education/eliminar/education/{id}")
-    public ResponseEntity<String> eliminar(@PathVariable Long id){
+    public ResponseEntity<EducationDto> eliminar(@PathVariable Long id){
         return ResponseEntity.status(HttpStatus.OK).body(service.eliminar(id));
     
     }

@@ -1,11 +1,9 @@
-
 package com.portfolio.jgd.repositories;
 
-import com.portfolio.jgd.models.Usuario;
+import com.portfolio.jgd.models.Sobremi;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
-
+public interface SobremiRepository extends JpaRepository<Sobremi, Long> {
 }

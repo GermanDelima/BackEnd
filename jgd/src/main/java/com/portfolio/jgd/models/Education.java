@@ -1,4 +1,3 @@
-
 package com.portfolio.jgd.models;
 
 import jakarta.persistence.Column;
@@ -8,24 +7,36 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Educacion")
-@Getter 
+@Getter
 @Setter
-@AllArgsConstructor 
+@AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "Educacion")
 public class Education {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
-private String tituloEdu;
-private Long fechaEdu;
-private String descEdu;
-@Column(name = "foto_educacion")
-private String imgEdu;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Size(min = 3, max = 60, message = "La edu no puede tener más de 60 caracteres")
+    private String instituto;
+
+    @Size(min = 3, max = 60, message = "El titulo no puede tener más de 60 caracteres")
+    private String titEdu;
+
+    private String fechaInic;
+    private String fechaFin;
+
+    @Size(min = 5, max = 2000, message = "La descripcion de la edu no puede tener más de 2000 caracteres")
+    private String descEduc;
+
+    @Column(name = "logo_certificacion")
+    private String logoCertificado;
 }

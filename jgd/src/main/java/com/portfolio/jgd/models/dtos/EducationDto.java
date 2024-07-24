@@ -12,8 +12,10 @@ import lombok.Setter;
 
 public class EducationDto {
 private Long id;
-private String tituloEdu;
-private Long fechaEdu;
-private String descEdu;
-private String imgEdu;
+private String instituto;
+private String titEdu;
+private String fechaInic;
+private String fechaFin;
+private String descEduc;
+private String logoCertificado;
 }
