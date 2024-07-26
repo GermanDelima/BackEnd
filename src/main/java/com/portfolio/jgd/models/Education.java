@@ -25,7 +25,7 @@ public class Education {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(min = 3, max = 60, message = "La edu no puede tener más de 60 caracteres")
+    @Size(min = 3, max = 60, message = "El instituto no puede tener más de 60 caracteres")
     private String instituto;
 
     @Size(min = 3, max = 60, message = "El titulo no puede tener más de 60 caracteres")
@@ -34,7 +34,7 @@ public class Education {
     private String fechaInic;
     private String fechaFin;
 
-    @Size(min = 5, max = 2000, message = "La descripcion de la edu no puede tener más de 2000 caracteres")
+    @Size(min = 5, max = 2000, message = "La descripcion de la educacion no puede tener más de 2000 caracteres")
     private String descEduc;
 
     @Column(name = "logo_certificacion")
