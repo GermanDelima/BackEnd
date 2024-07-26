@@ -17,7 +17,6 @@ public class Diploma {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(min = 3, max = 60, message = "El diploma no puede tener más de 30 caracteres")
     @Column(name = "ImgDiploma")
     private String logo;
 }

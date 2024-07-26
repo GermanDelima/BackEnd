@@ -14,7 +14,7 @@ public class MiConfiguracionCors implements WebMvcConfigurer{
     @Override
     public void addCorsMappings(CorsRegistry registry){
        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:4200") // Reemplaza con el origen de tu frontend Angular
+                .allowedOrigins("https://delimaprograma.web.app") 
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
                 .allowedHeaders("*")
                 .allowCredentials(true);

@@ -15,7 +15,7 @@ public class ProyectoController {
   public ProyectoService service;
 
 
-  //crear una experiencia
+  
   @PostMapping("/api/proyecto/crear/proyecto")
   public ResponseEntity<ProyectoDto> crearProyecto(@RequestBody ProyectoDto dto ){
     return ResponseEntity.status(HttpStatus.CREATED).body(service.crearProyecto(dto));
