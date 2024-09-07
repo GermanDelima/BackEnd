@@ -14,7 +14,7 @@ public class MiConfiguracionCors implements WebMvcConfigurer{
     @Override
     public void addCorsMappings(CorsRegistry registry){
        registry.addMapping("/**")
-                .allowedOrigins("https://delimaprograma.web.app") 
+                .allowedOrigins("https://delimaprograma-3f21a.web.app") 
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
                 .allowedHeaders("*")
                 .allowCredentials(true);
