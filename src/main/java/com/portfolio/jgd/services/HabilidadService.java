@@ -1,11 +1,9 @@
 package com.portfolio.jgd.services;
 
 import com.portfolio.jgd.mappers.HabilidadMapper;
-import com.portfolio.jgd.mappers.ProyectoMapper;
 import com.portfolio.jgd.models.Habilidad;
 import com.portfolio.jgd.models.dtos.HabilidadDto;
 import com.portfolio.jgd.repositories.HabilidadRepository;
-import org.apache.catalina.mapper.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/auth")
-@CrossOrigin(origins = {"https://delimaprograma-3f21a.web.app/inicio"})
-//@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = {"https://delimaprograma-3f21a.web.app"})
+//@CrossOrigin(origins = {"http://localhost:4200/inicio"})
 public class AuthenticationController {
 
 
