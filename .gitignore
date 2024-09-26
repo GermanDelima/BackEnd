@@ -1,5 +1,13 @@
-# Ignorar la carpeta target/ generada por Maven
+HELP.md
+##target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Incluir archivos específicos de la carpeta target
 /target/
+!/target/jgd-0.0.1-SNAPSHOT.jar
+!/target/jgd-0.0.1-SNAPSHOT.jar.original
 
 ### STS ###
 .apt_generated
@@ -22,7 +30,9 @@
 /dist/
 /nbdist/
 /.nb-gradle/
-/build/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
